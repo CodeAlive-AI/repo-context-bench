@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/node_modules/
+**/.DS_Store
+.env
+.env.*
+!.env.example
+artifacts/
+coverage/
+src/RepoContextBench/ReportFrontend/dist/

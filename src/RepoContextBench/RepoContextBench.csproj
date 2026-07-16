@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>RepoContextBench</AssemblyName>
+        <RootNamespace>RepoContextBench</RootNamespace>
+        <UserSecretsId>RepoContextBench</UserSecretsId>
+        <CodeAliveBackendRoot Condition="'$(CodeAliveBackendRoot)' == ''">$(MSBuildThisFileDirectory)..\..\..\codealive-app\src</CodeAliveBackendRoot>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(CodeAliveBackendRoot)\agents\CodeAlive.Agents\CodeAlive.Agents.csproj" />
+        <ProjectReference Include="$(CodeAliveBackendRoot)\CodeAlive.Common.Services\CodeAlive.Common.Services.csproj" />
+        <ProjectReference Include="$(CodeAliveBackendRoot)\CodeAlive.Domain\CodeAlive.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Include="$(CodeAliveBackendRoot)\SolutionGlobalUsings.cs" Link="SolutionGlobalUsings.cs" />
+        <Compile Include="$(CodeAliveBackendRoot)\IdsGlobalUsings.cs" Link="IdsGlobalUsings.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="$(CodeAliveBackendRoot)\agents\CodeAlive.Agents\Prompts\**\*.liquid" LinkBase="Prompts" CopyToOutputDirectory="PreserveNewest" />
+        <Content Include="ReportAssets\**\*" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="10.0.9" />
+        <PackageReference Include="Serilog.Extensions.Hosting" Version="10.0.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="10.0.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
+    </ItemGroup>
+
+    <Target Name="ValidateCodeAliveBackendRoot" BeforeTargets="PrepareForBuild"
+            Condition="!Exists('$(CodeAliveBackendRoot)\agents\CodeAlive.Agents\CodeAlive.Agents.csproj')">
+        <Error Text="RepoContextBench requires a CodeAlive backend checkout. Set CodeAliveBackendRoot to its src directory." />
+    </Target>
+
+</Project>
