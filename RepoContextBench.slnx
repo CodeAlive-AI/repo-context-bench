@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/RepoContextBench/RepoContextBench.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/RepoContextBench.Tests/RepoContextBench.Tests.csproj" />
+  </Folder>
+</Solution>

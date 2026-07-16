@@ -1,0 +1,80 @@
+{
+  "provider": "Scaleway",
+  "model": "qwen3.6-35b-a3b",
+  "reasoningEffort": "high",
+  "endpoint": "https://api.scaleway.ai/5cb41505-09f2-4825-8942-3ea2d068e84c/v1/chat/completions",
+  "warmupRequests": 1,
+  "maxTokens": 256,
+  "measuredAtUtc": "2026-07-15T17:37:01.202409+00:00",
+  "samples": [
+    {
+      "provider": "Scaleway",
+      "headersMs": 195.4742,
+      "timeToFirstGeneratedTokenMs": 234.0879,
+      "timeToFirstVisibleTokenMs": 2703.8638,
+      "endToEndMs": 2703.8638,
+      "generationMs": 2469.7759,
+      "promptTokens": 80,
+      "completionTokens": 256,
+      "totalTokens": 336,
+      "reportedCompletionTokensPerSecond": 103.65312901466079
+    },
+    {
+      "provider": "Scaleway",
+      "headersMs": 1307.9295,
+      "timeToFirstGeneratedTokenMs": 2900.0035,
+      "timeToFirstVisibleTokenMs": 8614.2025,
+      "endToEndMs": 8614.2025,
+      "generationMs": 5714.199,
+      "promptTokens": 80,
+      "completionTokens": 256,
+      "totalTokens": 336,
+      "reportedCompletionTokensPerSecond": 44.80067985031673
+    },
+    {
+      "provider": "Scaleway",
+      "headersMs": 749.4905,
+      "timeToFirstGeneratedTokenMs": 2461.061,
+      "timeToFirstVisibleTokenMs": 5516.6514,
+      "endToEndMs": 5516.6514,
+      "generationMs": 3055.5903999999996,
+      "promptTokens": 80,
+      "completionTokens": 256,
+      "totalTokens": 336,
+      "reportedCompletionTokensPerSecond": 83.78086277532488
+    },
+    {
+      "provider": "Scaleway",
+      "headersMs": 704.5932,
+      "timeToFirstGeneratedTokenMs": 2256.2571,
+      "timeToFirstVisibleTokenMs": 5503.4601,
+      "endToEndMs": 5503.4601,
+      "generationMs": 3247.2030000000004,
+      "promptTokens": 80,
+      "completionTokens": 256,
+      "totalTokens": 336,
+      "reportedCompletionTokensPerSecond": 78.8370791724447
+    },
+    {
+      "provider": "Scaleway",
+      "headersMs": 1256.997,
+      "timeToFirstGeneratedTokenMs": 2514.9226,
+      "timeToFirstVisibleTokenMs": 5261.9765,
+      "endToEndMs": 5261.9765,
+      "generationMs": 2747.0539,
+      "promptTokens": 80,
+      "completionTokens": 256,
+      "totalTokens": 336,
+      "reportedCompletionTokensPerSecond": 93.19074518341267
+    }
+  ],
+  "summary": {
+    "samples": 5,
+    "medianHeadersMs": 749.4905,
+    "medianTimeToFirstGeneratedTokenMs": 2461.061,
+    "medianTimeToFirstVisibleTokenMs": 5503.4601,
+    "medianEndToEndMs": 5503.4601,
+    "p95EndToEndMs": 7994.692279999999,
+    "medianReportedCompletionTokensPerSecond": 83.78086277532488
+  }
+}
